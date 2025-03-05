@@ -24,7 +24,7 @@ void main() {
   int? age = 21;
   Sex sex = Sex.female;
 
-  switch (Sex) {
+  switch (sex) {
     case Sex.male:
       switch (age ?? 0) {
         case >= 20 && <= 25:
