@@ -1,6 +1,7 @@
-import 'dart:ffi';
-
 enum Weekday { monday, tuesday, wednesday, thursday, friday, saturday, sunday }
+
+enum Sex {male, female}
+
 
 void main() {
   Weekday? weekday;
@@ -16,8 +17,25 @@ void main() {
       print("Freitag ist super");
     case Weekday.saturday:
     case Weekday.sunday:
-      print("Wochenende ist geniasl");
+      print("Wochenende ist genial");
     default:
       print("Kein Tag ausgewählt");
   }
+  
+  
+  int? age;
+
+switch (Sex) {
+  case Sex.male
+    switch (age) {
+      case >= 20 && <=25:
+        print("im Schnitt 1,81,4m");
+      case >25 && <= 30:
+        print("im Schnitt 181,3m");
+
+
+}
+
+
+
 }
