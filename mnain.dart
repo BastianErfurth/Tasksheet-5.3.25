@@ -1,7 +1,6 @@
 enum Weekday { monday, tuesday, wednesday, thursday, friday, saturday, sunday }
 
-enum Sex {male, female}
-
+enum Sex { male, female }
 
 void main() {
   Weekday? weekday;
@@ -21,21 +20,27 @@ void main() {
     default:
       print("Kein Tag ausgewählt");
   }
-  
-  
+
   int? age;
 
-switch (Sex) {
-  case Sex.male
-    switch (age) {
-      case >= 20 && <=25:
-        print("im Schnitt 1,81,4m");
-      case >25 && <= 30:
-        print("im Schnitt 181,3m");
-
-
-}
-
-
-
+  switch (Sex) {
+    case Sex.male:
+      switch (age ?? 0) {
+        case >= 20 && <= 25:
+          print("im Schnitt 1,81,4m");
+        case > 25 && <= 30:
+          print("im Schnitt 181,3m");
+        case > 30 && <= 35:
+          print("ImSchnitt 180,4m");
+      }
+    case Sex.female:
+      switch (age ?? 0) {
+        case >= 20 && <= 25:
+          print("im Schnitt 167,5");
+        case > 25 && <= 30:
+          print("im Schnitt 167,3m");
+        case > 30 && <= 35:
+          print("ImSchnitt 167,2m");
+      }
+  }
 }
